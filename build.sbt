@@ -3,14 +3,7 @@ lazy val root = (project in file("."))
     name := "crypto-sample",
     version := "1.0"
   )
-  .aggregate(core)
-
-lazy val core = (project in file("./modules/core"))
-  .settings(
-    name := "core",
-  )
   .settings(commonSettings)
-  .settings(coreSettings)
 
 /**
  * Common Settings
@@ -62,14 +55,7 @@ lazy val commonSettings = Seq(
       oldStrategy(x)
   },
   test in assembly := {},
-)
-
-/**
- * Core Settings
- */
-lazy val coreSettings = Seq(
-  libraryDependencies += "software.amazon.cryptools" % "AmazonCorrettoCryptoProvider" % "1.2.0"
-  /* libraryDependencies ++= Dependencies.coreDependencies */
+  libraryDependencies ++= Dependencies.common
 )
 
 /**

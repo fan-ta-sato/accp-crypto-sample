@@ -5,10 +5,11 @@ object Versions {
 }
 
 object Dependencies {
-  val coreDependencies = Seq(
-     "software.amazon.cryptools" % "AmazonCorrettoCryptoProvider" % "1.2.0"
-    )
+  val common = Seq(
+    Libraries.accp,
+  )
 }
 
 object Libraries {
+     lazy val accp = "software.amazon.cryptools" % "AmazonCorrettoCryptoProvider" % "1.2.0"
 }
