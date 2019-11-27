@@ -11,5 +11,5 @@ object Dependencies {
 }
 
 object Libraries {
-     lazy val accp = "software.amazon.cryptools" % "AmazonCorrettoCryptoProvider" % "1.2.0"
+     lazy val accp = "software.amazon.cryptools" % "AmazonCorrettoCryptoProvider" % "1.2.0" classifier "linux-x86_64"
 }
